@@ -25,6 +25,7 @@ var foodY ;
 
 // score 
 var score = 0;
+var flag =true;
 
 // sound
 
@@ -88,14 +89,10 @@ function update(){
 
 
 // Good score Sound
-if (score === 5) {
-    goodScoreSound.play();
-    setTimeout(() => {
-    goodScoreSound.pause();
-    goodScoreSound.currentTime = 0;
-    score = 6;
-    }, 2000);
-}
+  if(score==2 && flag==true){
+            goodScoreSound.play();
+            flag =false;
+        }
 
 
     // to move the body with the head //
